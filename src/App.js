@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import { Container } from "@mui/material";
+import React from "react";
+import { Redirect, Route, Switch } from "react-router-dom";
+import "./App.css";
+import Header from "./components/Header";
+import SnackbarCustom from "./components/SnackbarCustom";
+import ListPage from "./pages/ListPage";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      <Container>
+        <Switch>
+          <Route path="/" exact>
+            <ListPage />
+          </Route>
+          <Redirect to="/" />
+        </Switch>
+      </Container>
+      <SnackbarCustom />
+    </>
   );
 }
 
