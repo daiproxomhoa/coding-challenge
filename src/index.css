@@ -11,3 +11,21 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+p {
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.h6 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+}
+.body1 {
+  font-family: Roboto;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 24px;
+}

@@ -1,21 +1,17 @@
 import { ThemeProvider } from "@emotion/react";
-import { render, screen } from "@testing-library/react";
-import { fireEvent } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import { describe } from "jest-circus";
 import React from "react";
-import { BrowserRouter as Router } from "react-router-dom";
 import App from "./App";
 import "./index.css";
 import RootProvider from "./provider/RootProvider";
 import { THEME } from "./theme";
 const FullApp = () => (
-  <Router>
-    <RootProvider>
-      <ThemeProvider theme={THEME}>
-        <App />
-      </ThemeProvider>
-    </RootProvider>
-  </Router>
+  <RootProvider>
+    <ThemeProvider theme={THEME}>
+      <App />
+    </ThemeProvider>
+  </RootProvider>
 );
 
 describe("Auth action", () => {

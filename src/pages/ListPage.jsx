@@ -1,16 +1,14 @@
-import { Box } from "@mui/system";
 import React from "react";
-import VideoCard from "../components/VideoCard";
-import { useAppState } from "../provider/RootProvider";
-
+import Selection1 from "../components/Selection1";
+import Selection2 from "../components/Selection2";
+import Selection3 from "../components/Selection3";
 function ListPage() {
-  const { listVideo = [] } = useAppState();
   return (
-    <Box>
-      {listVideo?.map((item) => {
-        return <VideoCard key={item.url} info={item} />;
-      })}
-    </Box>
+    <div>
+      <Selection1 />
+      <Selection2 />
+      <Selection3 />
+    </div>
   );
 }
 
