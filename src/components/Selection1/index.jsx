@@ -16,7 +16,6 @@ function Selection1() {
             start="-200px"
             end="bottom center"
             scrub={1}
-            markers={true}
             pin={true}
           >
             <Tween
@@ -77,7 +76,6 @@ function Selection1() {
           start="56px center"
           end="2000px center"
           scrub={1}
-          markers={true}
           pin={true}
         >
           <Tween
